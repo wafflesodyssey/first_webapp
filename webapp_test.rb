@@ -17,4 +17,9 @@ class FirstwebappTest < Minitest::Test
     assert FirstwebappTest
     assert Firstwebapp
   end
+
+  def test_get_name
+    response = get("Welcome, World")
+    assert_equal "Welcome, World"
+  end
 end

@@ -10,11 +10,15 @@ class Firstwebapp < Sinatra::Base
   end
 
 
-  get "/Welcome/webapp/for/:billy" do
-    Webapp.new(params["name"]).generate
+  get "/:name" do
+    "Welcome " + params["name"].capitalize
   end
 
+  get "/lorem/standard" do
 
+  end
+
+  
 run! if app_file == $0
 
 
