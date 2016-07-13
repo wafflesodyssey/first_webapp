@@ -5,15 +5,14 @@ require 'pry'
 
 class Firstwebapp < Sinatra::Base
 
-  get "/Welcome" do
+  get "/" do
     "Welcome, World"
   end
 
 
-
-
-
-
+  get "/Welcome/webapp/for/:billy" do
+    Webapp.new(params["name"]).generate
+  end
 
 
 run! if app_file == $0
