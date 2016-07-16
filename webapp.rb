@@ -9,7 +9,6 @@ class Firstwebapp < Sinatra::Base
     "Welcome, World"
   end
 
-
   get "/:name" do
     "Welcome " + params["name"].capitalize
   end

@@ -10,20 +10,19 @@ class FirstwebappTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
-    FirstwebappTest
+    Firstwebapp
   end
 
-  def test_webapp_message
-    assert FirstwebappTest
+  def test_webapp
     assert Firstwebapp
   end
 
-  def test_get_name
+  def test_welcome
     response = get "/russell"
-    assert_equal "Welcome Russell", response.body
+    assert_equal "Welcome Russell",response.body
   end
 
-  def test_ipsum_key
+  def test_ipsum
     response = get "/lorem/key"
     assert_includes response.body, "key"
   end

@@ -6,7 +6,7 @@ source "https://rubygems.org"
 # gem "rails"
 
 gem "sinatra"
-gem "pry"
+gem "pry-byebug"
 gem "httparty"
 gem "rack-test", require: "rack/test"
 gem "webmock"
